@@ -19,4 +19,7 @@ This project will facilitate developers to setup multiple dev environment to exe
 #### How to browse the projects 
  - php 5.6 : http://localhost:8081/testme.php
  - php 7 : http://localhost:8082/testme.php
-
+ 
+#### How to execute unit tests
+    docker exec -it dev_web_php5_6 /bin/bash
+    phpunit
