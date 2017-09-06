@@ -4,6 +4,16 @@ WORKDIR /var/www/html
 
 #Install dependent software
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes \
+    cron \
+    libreoffice-common \
+    libreoffice-draw \
+    libreoffice-writer \
+    libpng12-dev \
+    libjpeg-dev \
+    libssl-dev \
+    libxml2-dev \
+    memcached \
+    mysql-client \
     unzip \
     zip
 
@@ -13,7 +23,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libfreetype6-dev \
     libgd-tools \
     libjpeg62-turbo-dev \
-    libldap2-dev \
     libmcrypt-dev \
     libmemcached-dev \
     libssh2-1-dev \
@@ -27,7 +36,6 @@ RUN  docker-php-ext-install \
      exif \
      gd \
      gettext \
-     ldap \
      mcrypt \
      mysqli \
      pdo \
