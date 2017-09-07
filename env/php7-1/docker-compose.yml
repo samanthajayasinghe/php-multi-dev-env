@@ -3,14 +3,14 @@ services:
   web:
     build: .
     ports:
-      - "8082:80"
+      - "8083:80"
     volumes:
       - ../../code:/var/www/html/
     links:
       - db-mysql
       - db-postgress
       - db-mariadb
-    container_name: dev_web_php70
+    container_name: dev_web_php71
 
   db-mysql:
     image: mysql:5.7
@@ -22,14 +22,14 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     restart: always
-    container_name: dev_mysql_php70
+    container_name: dev_mysql_php71
 
   db-postgress:
       image: postgres
       environment:
           POSTGRES_PASSWORD: postgres
       restart: always
-      container_name: dev_pg_php70
+      container_name: dev_pg_php71
 
   db-mariadb:
     image: mariadb
@@ -38,4 +38,4 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     restart: always
-    container_name: dev_mariadb_php70
+    container_name: dev_mariadb_php71

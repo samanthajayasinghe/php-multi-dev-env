@@ -15,11 +15,16 @@ This project will facilitate developers to setup multiple dev environment to exe
 #### How to spin PHP 7.0
     docker-compose -f env/php7-0/docker-compose.yml up -d
     docker-compose -f env/php7-0/docker-compose.yml stop
+    
+#### How to spin PHP 7.1
+    docker-compose -f env/php7-1/docker-compose.yml up -d
+    docker-compose -f env/php7-1/docker-compose.yml stop  
 
 #### How to browse the projects 
  - php 5.6 : http://localhost:8081/testme.php
  - php 7.0 : http://localhost:8082/testme.php
+ - php 7.1 : http://localhost:8083/testme.php
  
 #### How to execute unit tests
-    docker exec -it dev_web_php5_6 /bin/bash
+    docker exec -it dev_web_php70 /bin/bash
     phpunit
