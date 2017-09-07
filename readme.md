@@ -10,17 +10,17 @@ This project will facilitate developers to setup multiple dev environment to exe
  
 #### Env information 
 
-| PHP Version  | DB Version | host/user/password |
-| ------------- | ------------- |------------- |
-| PHP 7.1  | Mysql 5.7.x  | db-mysql/root/root  |
-| PHP 7.1  | MariaDB 10.x  | db-mariadb/root/root  |
-| PHP 7.1  | Postgres 9.x  | db-postgress/postgres/postgres  |
-| PHP 7.0  | Mysql 5.7.x  | db-mysql/root/root  |
-| PHP 7.0  | MariaDB 10.x  | db-mariadb/root/root  |
-| PHP 7.0  | Postgres 9.x  | db-postgress/postgres/postgres  |
-| PHP 5.6  | Mysql 5.7.x  | db-mysql/root/root  |
-| PHP 5.6  | MariaDB 10.x  | db-mariadb/root/root  |
-| PHP 5.6  | Postgres 9.x  | db-postgress/postgres/postgres  |
+| PHP Version  | DB Version | DB-Host | DB-User | DB-Password |
+| ------------- | ------------- |------------- | ------------- | ------------- |
+| PHP 7.1  | Mysql 5.7.x  | db-mysql | root | root  |
+| PHP 7.1  | MariaDB 10.x  | db-mariadb | root | root  |
+| PHP 7.1  | Postgres 9.x  | db-postgress |postgres | postgres  |
+| PHP 7.0  | Mysql 5.7.x  | db-mysql | root | root  |
+| PHP 7.0  | MariaDB 10.x  | db-mariadb | root | root  |
+| PHP 7.0  | Postgres 9.x  | db-postgress | postgres | postgres  |
+| PHP 5.6  | Mysql 5.7.x  | db-mysql | root | root  |
+| PHP 5.6  | MariaDB 10.x  | db-mariadb | root | root  |
+| PHP 5.6  | Postgres 9.x  | db-postgress | postgres | postgres  |
 
 
 #### How to spin PHP 5.6
