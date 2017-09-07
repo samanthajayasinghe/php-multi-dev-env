@@ -11,6 +11,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-
     libpng12-dev \
     libjpeg-dev \
     libssl-dev \
+    libicu-dev \
+    libfreetype6-dev \
     libxml2-dev \
     memcached \
     mysql-client \
@@ -19,7 +21,6 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-
 
 #Install libraries required to compile PHP modules
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libaio1 \
     libfreetype6-dev \
     libgd-tools \
     libjpeg62-turbo-dev \
@@ -38,6 +39,7 @@ RUN  docker-php-ext-install \
      gettext \
      mcrypt \
      mysqli \
+     intl \
      pdo \
      pdo_mysql \
      opcache \
