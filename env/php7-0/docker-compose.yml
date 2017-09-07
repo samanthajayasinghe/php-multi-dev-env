@@ -7,10 +7,12 @@ services:
     volumes:
       - ../../code:/var/www/html/
     links:
-      - db
+      - db-mysql
+      - db-postgress
+      - db-mariadb
     container_name: dev_web_php7
 
-  db:
+  db-mysql:
     image: mysql:5.7
     expose:
       - "3306"
@@ -21,3 +23,19 @@ services:
       MYSQL_ROOT_PASSWORD: root
     restart: always
     container_name: dev_mysql_php7
+
+  db-postgress:
+      image: postgres
+      environment:
+          POSTGRES_PASSWORD: postgres
+      restart: always
+      container_name: dev_pg_php7
+
+  db-mariadb:
+    image: mariadb
+    expose:
+      - "3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: dev_mariadb_php7

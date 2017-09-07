@@ -16,6 +16,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-
     libxml2-dev \
     memcached \
     mysql-client \
+    libpq-dev \
+    postgresql-contrib \
     unzip \
     zip
 
@@ -35,7 +37,6 @@ RUN  docker-php-ext-install \
      bcmath \
      calendar \
      exif \
-     gd \
      gettext \
      mcrypt \
      mysqli \
@@ -44,7 +45,11 @@ RUN  docker-php-ext-install \
      pdo_mysql \
      opcache \
      soap \
+     pgsql \
      zip
+
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+        && docker-php-ext-install -j$(nproc) gd
 
 # pecl/stats requires PHP (version >= 5.3.0, version <= 5.6.99), installed version is 7.1.6
 #RUN pecl install stats-1.0.5
